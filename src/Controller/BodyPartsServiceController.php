@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\BodyPartsService;
+use App\Service\DataCreatorService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,7 +11,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class BodyPartsServiceController extends AbstractController
 {
     /**
-     * @Route("/soap")
+     * @Route("/dictionary/webservice")
+     * @param BodyPartsService $helloService
+     * @return Response
      */
     public function index(BodyPartsService $helloService)
     {
@@ -25,5 +28,17 @@ class BodyPartsServiceController extends AbstractController
         $response->setContent(ob_get_clean());
 
         return $response;
+    }
+
+    /**
+     * @Route("/create-data")
+     * @param DataCreatorService $dataCreator
+     * @return Response
+     */
+    public function createDataToDB(DataCreatorService $dataCreator)
+    {
+        $dataCreator->createDataToDB();
+
+        return new Response('Success!');
     }
 }
