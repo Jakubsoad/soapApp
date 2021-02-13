@@ -15,7 +15,6 @@ RUN apk add --no-cache \
     php8-fileinfo\
     php8-mbstring \
     php8-opcache \
-    php8-openssl \
     php8-pdo \
     php8-pdo_mysql \
     php8-mysqli \
@@ -28,6 +27,7 @@ RUN apk add --no-cache \
     php8-zip \
     php8-xmlwriter \
     php8-pecl-apcu \
+    php8-soap \
     make \
     curl
 
