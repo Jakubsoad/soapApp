@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../soapApp">
+      <sourceFolder url="file://$MODULE_DIR$/../soapApp/src" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/../soapApp/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/../soapApp/spec" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/doctrine-migrations-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/doctrine/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/friendsofphp/proxy-manager-lts" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/laminas/laminas-code" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/laminas/laminas-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/cache-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/dependency-injection" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/doctrine-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/flex" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/framework-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/proxy-manager-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/var-exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/../soapApp/vendor/symfony/yaml" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
