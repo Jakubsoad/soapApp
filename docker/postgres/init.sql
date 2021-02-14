@@ -2,3 +2,4 @@ CREATE USER soap_user;
 
 CREATE DATABASE soap_db;
 GRANT ALL PRIVILEGES ON DATABASE soap_db TO soap_user;
+GRANT ALL PRIVILEGES ON DATABASE soap_db TO postgres;

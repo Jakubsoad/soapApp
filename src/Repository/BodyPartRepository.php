@@ -14,37 +14,27 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class BodyPartRepository extends ServiceEntityRepository
 {
+    /**
+     * BodyPartRepository constructor.
+     * @param ManagerRegistry $registry
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, BodyPart::class);
     }
 
-    // /**
-    //  * @return BodyPart[] Returns an array of BodyPart objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @param string $name
+     *
+     * @return BodyPart
+     */
+    public function findOneByLowerName(string $name): BodyPart
     {
-        return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('b.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $qb = $this->createQueryBuilder('bp')
+            ->andWhere('lower(bp.name) = :name')
+            ->setParameter('name', trim(strtolower($name)))
+            ->setMaxResults(1);
 
-    /*
-    public function findOneBySomeField($value): ?BodyPart
-    {
-        return $this->createQueryBuilder('b')
-            ->andWhere('b.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $qb->getQuery()->getSingleResult();
     }
-    */
 }

@@ -9,6 +9,18 @@
              xmlns="http://schemas.xmlsoap.org/wsdl/"
              targetNamespace="urn:helloservicewsdl">
 
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://schema.example.com">
+            <xsd:complexType name="resultArray">
+                <xsd:complexContent>
+                    <xsd:restriction base="SOAP-ENC:Array">
+                        <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="xsd:string[]" />
+                    </xsd:restriction>
+                </xsd:complexContent>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+
     <types>
         <xsd:schema targetNamespace="urn:hellowsdl">
             <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
@@ -16,39 +28,40 @@
         </xsd:schema>
     </types>
 
-    <message name="testerRequest">
+    <message name="getSubPartsRequest">
         <part name="name" type="xsd:string"/>
     </message>
 
-    <message name="testerResponse">
-        <part name="return" type="xsd:string"/>
+    <message name="getSubPartsResponse">
+        <part name="return" type="tns:resultArray"/>
     </message>
 
-    <message name="anotherRequest">
-        <part name="name" type="xsd:string"/>
+    <message name="doesSubpartBelongToPartRequest">
+        <part name="bodyPart" type="xsd:string"/>
+        <part name="bodySubpart" type="xsd:string"/>
     </message>
 
-    <message name="anotherResponse">
-        <part name="return" type="xsd:string"/>
+    <message name="doesSubpartBelongToPartResponse">
+        <part name="return" type="xsd:boolean"/>
     </message>
 
     <portType name="hellowsdlPortType">
-        <operation name="tester">
-            <documentation>tester World</documentation>
-            <input message="tns:testerRequest"/>
-            <output message="tns:testerResponse"/>
+        <operation name="getSubParts">
+            <documentation>getSubParts World</documentation>
+            <input message="tns:getSubPartsRequest"/>
+            <output message="tns:getSubPartsResponse"/>
         </operation>
-        <operation name="another">
-            <documentation>another World</documentation>
-            <input message="tns:anotherRequest"/>
-            <output message="tns:anotherResponse"/>
+        <operation name="doesSubpartBelongToPart">
+            <documentation>doesSubpartBelongToPart World</documentation>
+            <input message="tns:doesSubpartBelongToPartRequest"/>
+            <output message="tns:doesSubpartBelongToPartResponse"/>
         </operation>
     </portType>
 
     <binding name="hellowsdlBinding" type="tns:hellowsdlPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <operation name="tester">
-            <soap:operation soapAction="urn:arnleadservicewsdl#tester" style="rpc"/>
+        <operation name="getSubParts">
+            <soap:operation soapAction="urn:arnleadservicewsdl#getSubParts" style="rpc"/>
 
             <input>
                 <soap:body use="encoded" namespace="urn:hellowsdl"
@@ -60,8 +73,8 @@
                            encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
             </output>
         </operation>
-        <operation name="another">
-            <soap:operation soapAction="urn:arnleadservicewsdl#another" style="rpc"/>
+        <operation name="doesSubpartBelongToPart">
+            <soap:operation soapAction="urn:arnleadservicewsdl#doesSubpartBelongToPart" style="rpc"/>
 
             <input>
                 <soap:body use="encoded" namespace="urn:hellowsdl"

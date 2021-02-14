@@ -9,8 +9,10 @@ services:
         environment:
             - "POSTGRES_USER=postgres"
             - "POSTGRES_PASSWORD=secret"
+        expose:
+            - "5433"
         ports:
-            - "54321:5432"
+            - "5433:5432"
 
     php:
         container_name: php-fpm

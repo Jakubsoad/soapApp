@@ -13,7 +13,8 @@ use Doctrine\ORM\EntityManagerInterface;
  */
 class DataCreatorService
 {
-    private EntityManagerInterface $entityManager;
+    /** @var EntityManagerInterface */
+    private $entityManager;
 
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -22,7 +23,6 @@ class DataCreatorService
 
     public function createDataToDB()
     {
-        print_r($this->entityManager->getConfiguration());die();
         $bodyPart = new BodyPart('ręka');
         $subPartsArr = [
             'kciuk',
