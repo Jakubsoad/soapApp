@@ -16,12 +16,19 @@ class DataCreatorService
     /** @var EntityManagerInterface */
     private $entityManager;
 
+    /**
+     * DataCreatorService constructor.
+     * @param EntityManagerInterface $entityManager
+     */
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
     }
 
-    public function createDataToDB()
+    /**
+     * Create example data
+     */
+    public function createDataToDB(): void
     {
         $bodyPart = new BodyPart('ręka');
         $subPartsArr = [
@@ -53,7 +60,11 @@ class DataCreatorService
         $this->createBodyPartWithSubparts($bodyPart, $subPartsArr);
     }
 
-    private function createBodyPartWithSubparts(BodyPart $bodyPart, array $subPartsArr)
+    /**
+     * @param BodyPart $bodyPart
+     * @param array $subPartsArr
+     */
+    private function createBodyPartWithSubparts(BodyPart $bodyPart, array $subPartsArr): void
     {
         $this->entityManager->persist($bodyPart);
 

@@ -35,8 +35,7 @@ class BodyPartsService
     /**
      * @param string $ownerName
      * @throws Exception
-     *
-     * @return Collection
+     * @return array
      */
     public function getSubPartsByOwner(string $ownerName): array
     {

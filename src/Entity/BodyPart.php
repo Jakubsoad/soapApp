@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Entity;
 
 use App\Repository\BodyPartRepository;
@@ -73,7 +74,6 @@ class BodyPart
     public function removeBodySubPart(BodySubParts $bodySubPart): self
     {
         if ($this->bodySubParts->removeElement($bodySubPart)) {
-            // set the owning side to null (unless already changed)
             if ($bodySubPart->getOwnerBodyPart() === $this) {
                 $bodySubPart->setOwnerBodyPart(null);
             }

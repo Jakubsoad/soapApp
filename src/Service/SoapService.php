@@ -1,9 +1,14 @@
 <?php
 
+
 namespace App\Service;
 
 use Exception;
 
+/**
+ * Class SoapService
+ * @package App\Service
+ */
 class SoapService
 {
     /** @var BodyPartsService */

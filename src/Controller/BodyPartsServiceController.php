@@ -1,11 +1,10 @@
 <?php
 
+
 namespace App\Controller;
 
-use App\Entity\BodyPart;
 use App\Service\SoapService;
 use App\Service\DataCreatorService;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,7 +18,7 @@ class BodyPartsServiceController extends AbstractController
      */
     public function index(SoapService $soapService): Response
     {
-        $soapServer = new \SoapServer('wsdl/soap_app_w.wsdl');
+        $soapServer = new \SoapServer('wsdl/soap_app.wsdl');
         $soapServer->setObject($soapService);
 
         $response = new Response();
